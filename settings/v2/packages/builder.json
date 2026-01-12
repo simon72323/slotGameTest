@@ -1,0 +1,56 @@
+{
+  "__version__": "1.3.9",
+  "textureCompressConfig": {
+    "userPreset": {
+      "26sjzSkFlDfr7BvGKSfpFG": {
+        "name": "png_webp_80",
+        "options": {
+          "web": {
+            "png": {
+              "quality": 80
+            },
+            "webp": {
+              "quality": 80
+            }
+          }
+        }
+      },
+      "a0TQMHNx1ITp8YqXKp9t4A": {
+        "name": "png_webp_100",
+        "options": {
+          "web": {
+            "png": {
+              "quality": 80
+            },
+            "webp": {
+              "quality": 100
+            }
+          }
+        }
+      },
+      "a1A0ErNOpA9YbJUmw9SQBl": {
+        "name": "jpg_webp_80",
+        "options": {
+          "web": {
+            "jpg": {
+              "quality": 80
+            },
+            "webp": {
+              "quality": 80
+            }
+          }
+        }
+      },
+      "52zmaR6jlLDrshTXWy5ZXC": {
+        "name": "png_8",
+        "options": {
+          "web": {
+            "png": {
+              "quality": 80
+            }
+          }
+        }
+      }
+    }
+  }
+}

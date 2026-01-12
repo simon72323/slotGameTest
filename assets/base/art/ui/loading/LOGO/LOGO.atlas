@@ -1,0 +1,111 @@
+
+LOGO.png
+size: 401,401
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+D
+  rotate: false
+  xy: 2, 126
+  size: 116, 107
+  orig: 116, 107
+  offset: 0, 0
+  index: -1
+I
+  rotate: false
+  xy: 120, 126
+  size: 26, 107
+  orig: 26, 107
+  offset: 0, 0
+  index: -1
+L
+  rotate: true
+  xy: 281, 184
+  size: 105, 108
+  orig: 105, 108
+  offset: 0, 0
+  index: -1
+N
+  rotate: false
+  xy: 169, 292
+  size: 113, 107
+  orig: 113, 107
+  offset: 0, 0
+  index: -1
+O
+  rotate: false
+  xy: 284, 291
+  size: 110, 108
+  orig: 110, 108
+  offset: 0, 0
+  index: -1
+O2
+  rotate: false
+  xy: 244, 21
+  size: 53, 50
+  orig: 53, 50
+  offset: 0, 0
+  index: -1
+O2_blur
+  rotate: false
+  xy: 191, 19
+  size: 51, 56
+  orig: 51, 56
+  offset: 0, 0
+  index: -1
+O2_light
+  rotate: false
+  xy: 115, 2
+  size: 74, 73
+  orig: 83, 81
+  offset: 5, 4
+  index: -1
+O2_wite
+  rotate: false
+  xy: 299, 21
+  size: 52, 50
+  orig: 53, 50
+  offset: 1, 0
+  index: -1
+O3
+  rotate: false
+  xy: 169, 182
+  size: 110, 108
+  orig: 110, 108
+  offset: 0, 0
+  index: -1
+O_add
+  rotate: false
+  xy: 2, 16
+  size: 111, 108
+  orig: 112, 112
+  offset: 0, 2
+  index: -1
+S
+  rotate: true
+  xy: 148, 77
+  size: 103, 108
+  orig: 103, 108
+  offset: 0, 0
+  index: -1
+T
+  rotate: false
+  xy: 258, 73
+  size: 99, 107
+  orig: 99, 107
+  offset: 0, 0
+  index: -1
+eff_mask
+  rotate: true
+  xy: 115, 89
+  size: 35, 25
+  orig: 39, 39
+  offset: 2, 7
+  index: -1
+glow_3
+  rotate: false
+  xy: 2, 235
+  size: 165, 164
+  orig: 179, 179
+  offset: 7, 7
+  index: -1

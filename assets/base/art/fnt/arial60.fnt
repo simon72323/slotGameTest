@@ -1,0 +1,18 @@
+info face=arial60 size=64 bold=0 italic=0 charset="" unicode=1 stretchH=100 smooth=1 aa=1 padding=0,0,0,0 spacing=1,1 outline=0
+common lineHeight=64 base=34 scaleW=170 scaleH=192 pages=1 packed=0 alphaChnl=0 redChnl=4 greenChnl=4 blueChnl=4
+page id=0 file="arial60.png"
+chars count=13
+char id=48 x=0 y=0 width=34 height=64 xoffset=0 yoffset=1 xadvance=34 page=0 chnl=0 letter="0"
+char id=49 x=34 y=0 width=24 height=64 xoffset=0 yoffset=1 xadvance=24 page=0 chnl=0 letter="1"
+char id=50 x=68 y=0 width=34 height=64 xoffset=0 yoffset=1 xadvance=34 page=0 chnl=0 letter="2"
+char id=51 x=102 y=0 width=34 height=64 xoffset=0 yoffset=1 xadvance=34 page=0 chnl=0 letter="3"
+char id=52 x=136 y=0 width=34 height=64 xoffset=0 yoffset=1 xadvance=34 page=0 chnl=0 letter="4"
+char id=53 x=0 y=64 width=34 height=64 xoffset=0 yoffset=1 xadvance=34 page=0 chnl=0 letter="5"
+char id=54 x=34 y=64 width=34 height=64 xoffset=0 yoffset=1 xadvance=34 page=0 chnl=0 letter="6"
+char id=55 x=68 y=64 width=34 height=64 xoffset=0 yoffset=1 xadvance=34 page=0 chnl=0 letter="7"
+char id=56 x=102 y=64 width=34 height=64 xoffset=0 yoffset=1 xadvance=34 page=0 chnl=0 letter="8"
+char id=57 x=136 y=64 width=34 height=64 xoffset=0 yoffset=1 xadvance=34 page=0 chnl=0 letter="9"
+char id=44 x=0 y=128 width=16 height=64 xoffset=0 yoffset=1 xadvance=16 page=0 chnl=0 letter=","
+char id=46 x=34 y=128 width=16 height=64 xoffset=0 yoffset=1 xadvance=16 page=0 chnl=0 letter="."
+char id=47 x=68 y=128 width=24 height=64 xoffset=0 yoffset=1 xadvance=24 page=0 chnl=0 letter="/"
+char id=75 x=102 y=128 width=34 height=64 xoffset=0 yoffset=1 xadvance=34 page=0 chnl=0 letter="K"
