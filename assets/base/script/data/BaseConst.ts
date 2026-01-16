@@ -59,6 +59,10 @@ export class BaseConst {
         }
     };
 
+    public static readonly BUNDLE_BASE_LANGUAGE: string = 'baseLanguage';
+    public static readonly BUNDLE_LANGUAGE: string = 'language';
+    public static readonly DIR_LOADING: string = 'loading';
+
     /** 網站 */
     public static Sites = {
         /** 開發網站 */

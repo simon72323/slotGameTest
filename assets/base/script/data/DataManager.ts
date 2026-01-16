@@ -24,6 +24,11 @@ export class DataManager {
         return DataManager.instance;
     }
 
+    /**是否要走API版本 */
+    public useAPI: boolean = false;
+    /**遊戲ID */
+    public gameID: string;
+
     /** 玩家餘額 */
     public userCredit: number = 0;
 
@@ -108,6 +113,41 @@ export class DataManager {
     /** 遊戲選單資料(語系ID: 遊戲名稱) */
     public gameNameList: { [key: number]: string } = {};
     //============================= server資料 ======================================
+
+    /**
+   *
+   * @param config
+   */
+    public init(config: any): void {
+        // if (this.initialize) {
+        //   return;
+        // }
+        // this.initialize = true;
+
+        UrlParam.initUrlParameters();
+
+        //API版本(有token資料)
+        if (UrlParam.token) {
+            this.gameID = /.{3}-.{2}-\d{5}/.exec(window.location.pathname)[0];
+            this.useAPI = true;
+            // this.account = 'guest';
+            // this.password = '1234';
+        }
+        //preview, build版
+        else {
+            this.gameID = config.gameID;
+            UrlParam.lang = config.lang;
+            // this.defaultSocketUrl = config.socketUrl;
+            this.useAPI = false;
+            UrlParam.token = config.token || '';
+            // this.account = config.account || 'guest';
+            // this.password = config.password || '1234';
+        }
+
+        // let currency = this.creditMode == CreditMode.Dollar ? 'USD' : 'EUR';
+        // let locale = this.digitMode == DigitMode.COMMA ? 'vi-VN' : 'en-US';
+        // XUtils.initFormat(currency, locale);
+    }
 
     /**
      * 取得完整下注紀錄網址
