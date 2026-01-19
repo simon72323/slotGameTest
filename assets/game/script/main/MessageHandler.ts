@@ -156,7 +156,7 @@ export class MessageHandler {
         if (gameResult.pay_line.length > 0) {
             //轉換中獎線資料
             gameResult.pay_line.forEach((payLine) => {
-                const data = Utils.getLinePathPosition(payLine.pay_line, payLine.amount, gameResult.game_result, GameConst.payLineData);
+                const data = Utils.getLinePathPosition(payLine.pay_line, payLine.amount, gameResult.game_result, GameConst.PAY_LINE_DATA);
                 winLineData.push({
                     payLineID: payLine.pay_line,
                     winPos: data.winPos,

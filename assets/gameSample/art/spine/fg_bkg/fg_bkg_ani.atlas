@@ -1,0 +1,216 @@
+
+fg_bkg_ani.png
+size: 840,840
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+balloon_A
+  rotate: false
+  xy: 475, 73
+  size: 20, 20
+  orig: 20, 20
+  offset: 0, 0
+  index: -1
+balloon_C
+  rotate: false
+  xy: 497, 73
+  size: 20, 20
+  orig: 20, 20
+  offset: 0, 0
+  index: -1
+balloon_D
+  rotate: true
+  xy: 298, 60
+  size: 30, 29
+  orig: 30, 29
+  offset: 0, 0
+  index: -1
+balloon_E
+  rotate: false
+  xy: 821, 223
+  size: 11, 13
+  orig: 11, 13
+  offset: 0, 0
+  index: -1
+balloon_F
+  rotate: true
+  xy: 821, 256
+  size: 16, 15
+  orig: 16, 15
+  offset: 0, 0
+  index: -1
+balloon_G
+  rotate: false
+  xy: 416, 46
+  size: 25, 26
+  orig: 25, 26
+  offset: 0, 0
+  index: -1
+balloon_H
+  rotate: true
+  xy: 703, 164
+  size: 20, 19
+  orig: 20, 19
+  offset: 0, 0
+  index: -1
+balloon_I
+  rotate: false
+  xy: 444, 66
+  size: 29, 27
+  orig: 29, 27
+  offset: 0, 0
+  index: -1
+balloon_J
+  rotate: false
+  xy: 387, 45
+  size: 27, 27
+  orig: 27, 27
+  offset: 0, 0
+  index: -1
+balloon_K
+  rotate: true
+  xy: 703, 143
+  size: 19, 18
+  orig: 19, 18
+  offset: 0, 0
+  index: -1
+balloon_L
+  rotate: true
+  xy: 821, 238
+  size: 16, 15
+  orig: 16, 15
+  offset: 0, 0
+  index: -1
+balloon_M
+  rotate: true
+  xy: 298, 27
+  size: 31, 28
+  orig: 31, 28
+  offset: 0, 0
+  index: -1
+bkg_down
+  rotate: false
+  xy: 2, 231
+  size: 720, 606
+  orig: 720, 606
+  offset: 0, 0
+  index: -1
+cloud_B
+  rotate: false
+  xy: 683, 47
+  size: 154, 60
+  orig: 170, 60
+  offset: 8, 0
+  index: -1
+cloud_C
+  rotate: false
+  xy: 445, 95
+  size: 156, 64
+  orig: 160, 66
+  offset: 2, 1
+  index: -1
+cloud_E
+  rotate: false
+  xy: 445, 161
+  size: 162, 68
+  orig: 170, 70
+  offset: 4, 1
+  index: -1
+fg_sky
+  rotate: true
+  xy: 724, 274
+  size: 211, 109
+  orig: 211, 109
+  offset: 0, 0
+  index: -1
+item_D_1
+  rotate: false
+  xy: 241, 46
+  size: 55, 44
+  orig: 55, 44
+  offset: 0, 0
+  index: -1
+item_D_2
+  rotate: false
+  xy: 2, 45
+  size: 186, 184
+  orig: 186, 184
+  offset: 0, 0
+  index: -1
+item_D_4
+  rotate: false
+  xy: 337, 40
+  size: 48, 94
+  orig: 48, 98
+  offset: 0, 0
+  index: -1
+item_D_5
+  rotate: false
+  xy: 609, 78
+  size: 72, 151
+  orig: 72, 151
+  offset: 0, 0
+  index: -1
+mountain
+  rotate: true
+  xy: 724, 487
+  size: 350, 109
+  orig: 350, 109
+  offset: 0, 0
+  index: -1
+tree_A
+  rotate: false
+  xy: 683, 186
+  size: 31, 43
+  orig: 31, 43
+  offset: 0, 0
+  index: -1
+tree_A1
+  rotate: true
+  xy: 387, 74
+  size: 60, 55
+  orig: 62, 57
+  offset: 1, 0
+  index: -1
+tree_B
+  rotate: true
+  xy: 241, 20
+  size: 24, 45
+  orig: 25, 45
+  offset: 1, 0
+  index: -1
+tree_C
+  rotate: false
+  xy: 683, 109
+  size: 18, 75
+  orig: 18, 75
+  offset: 0, 0
+  index: -1
+tree_C1
+  rotate: false
+  xy: 337, 136
+  size: 106, 93
+  orig: 118, 96
+  offset: 2, 0
+  index: -1
+tree_b1
+  rotate: true
+  xy: 190, 43
+  size: 47, 49
+  orig: 49, 49
+  offset: 1, 0
+  index: -1
+tree_bag
+  rotate: false
+  xy: 190, 92
+  size: 145, 137
+  orig: 145, 137
+  offset: 0, 0
+  index: -1
+tree_cover
+  rotate: true
+  xy: 724, 109
+  size: 163, 95
+  orig: 163, 97
+  offset: 0, 2
+  index: -1

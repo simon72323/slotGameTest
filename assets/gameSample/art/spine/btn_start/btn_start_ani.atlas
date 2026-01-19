@@ -1,0 +1,97 @@
+
+btn_start_ani.jpg
+size: 96,96
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+btn_start_bkg/btn_start_bkg_00000
+  rotate: false
+  xy: 77, 10
+  size: 4, 13
+  orig: 90, 29
+  offset: 9, 6
+  index: -1
+btn_start_bkg/btn_start_bkg_00002
+  rotate: false
+  xy: 80, 48
+  size: 11, 21
+  orig: 90, 29
+  offset: 9, 4
+  index: -1
+btn_start_bkg/btn_start_bkg_00004
+  rotate: false
+  xy: 33, 32
+  size: 17, 23
+  orig: 90, 29
+  offset: 9, 4
+  index: -1
+btn_start_bkg/btn_start_bkg_00006
+  rotate: false
+  xy: 52, 21
+  size: 23, 23
+  orig: 90, 29
+  offset: 9, 4
+  index: -1
+btn_start_bkg/btn_start_bkg_00008
+  rotate: true
+  xy: 2, 2
+  size: 28, 23
+  orig: 90, 29
+  offset: 10, 4
+  index: -1
+btn_start_bkg/btn_start_bkg_00012
+  rotate: false
+  xy: 2, 32
+  size: 29, 23
+  orig: 90, 29
+  offset: 22, 4
+  index: -1
+btn_start_bkg/btn_start_bkg_00016
+  rotate: false
+  xy: 41, 71
+  size: 29, 23
+  orig: 90, 29
+  offset: 35, 4
+  index: -1
+btn_start_bkg/btn_start_bkg_00020
+  rotate: true
+  xy: 27, 2
+  size: 28, 23
+  orig: 90, 29
+  offset: 48, 4
+  index: -1
+btn_start_bkg/btn_start_bkg_00022
+  rotate: false
+  xy: 52, 46
+  size: 26, 23
+  orig: 90, 29
+  offset: 55, 4
+  index: -1
+btn_start_bkg/btn_start_bkg_00024
+  rotate: false
+  xy: 72, 71
+  size: 19, 23
+  orig: 90, 29
+  offset: 62, 4
+  index: -1
+btn_start_bkg/btn_start_bkg_00026
+  rotate: true
+  xy: 52, 6
+  size: 13, 23
+  orig: 90, 29
+  offset: 68, 4
+  index: -1
+btn_start_bkg/btn_start_bkg_00028
+  rotate: false
+  xy: 77, 25
+  size: 6, 19
+  orig: 90, 29
+  offset: 75, 6
+  index: -1
+star_light
+  rotate: false
+  xy: 2, 57
+  size: 37, 37
+  orig: 69, 69
+  offset: 16, 16
+  index: -1

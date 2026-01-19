@@ -1,0 +1,83 @@
+
+super_reels_box_ani.png
+size: 1144,1144
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+star
+  rotate: true
+  xy: 2, 29
+  size: 52, 50
+  orig: 52, 50
+  offset: 0, 0
+  index: -1
+star_light
+  rotate: false
+  xy: 338, 2
+  size: 129, 129
+  orig: 138, 138
+  offset: 5, 4
+  index: -1
+super_reels_box/super_reels_box_00000
+  rotate: false
+  xy: 2, 805
+  size: 384, 334
+  orig: 400, 334
+  offset: 9, 0
+  index: -1
+super_reels_box/super_reels_box_00002
+  rotate: false
+  xy: 388, 805
+  size: 384, 334
+  orig: 400, 334
+  offset: 9, 0
+  index: -1
+super_reels_box/super_reels_box_00004
+  rotate: true
+  xy: 774, 755
+  size: 384, 334
+  orig: 400, 334
+  offset: 9, 0
+  index: -1
+super_reels_box/super_reels_box_00006
+  rotate: false
+  xy: 2, 469
+  size: 384, 334
+  orig: 400, 334
+  offset: 9, 0
+  index: -1
+super_reels_box/super_reels_box_00008
+  rotate: false
+  xy: 388, 469
+  size: 384, 334
+  orig: 400, 334
+  offset: 9, 0
+  index: -1
+super_reels_box/super_reels_box_00010
+  rotate: true
+  xy: 774, 369
+  size: 384, 334
+  orig: 400, 334
+  offset: 9, 0
+  index: -1
+super_reels_box/super_reels_box_00012
+  rotate: true
+  xy: 2, 83
+  size: 384, 334
+  orig: 400, 334
+  offset: 9, 0
+  index: -1
+super_reels_box/super_reels_box_00014
+  rotate: false
+  xy: 338, 133
+  size: 384, 334
+  orig: 400, 334
+  offset: 9, 0
+  index: -1
+super_reels_box/super_reels_box_00017
+  rotate: false
+  xy: 724, 33
+  size: 384, 334
+  orig: 400, 334
+  offset: 9, 0
+  index: -1

@@ -1,0 +1,48 @@
+
+buyfeature_box_ani.png
+size: 1032,1032
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+buyfeature_Normal_box
+  rotate: false
+  xy: 582, 406
+  size: 339, 446
+  orig: 339, 446
+  offset: 0, 0
+  index: -1
+buyfeature_Super_box
+  rotate: true
+  xy: 582, 65
+  size: 339, 446
+  orig: 339, 446
+  offset: 0, 0
+  index: -1
+buyfeature_box_roof
+  rotate: false
+  xy: 2, 862
+  size: 758, 166
+  orig: 760, 170
+  offset: 1, 2
+  index: -1
+esc_btn
+  rotate: false
+  xy: 762, 854
+  size: 50, 50
+  orig: 50, 50
+  offset: 0, 0
+  index: -1
+freegame_box
+  rotate: true
+  xy: 2, 128
+  size: 732, 578
+  orig: 732, 578
+  offset: 0, 0
+  index: -1
+freegame_box_light
+  rotate: true
+  xy: 762, 906
+  size: 122, 100
+  orig: 122, 100
+  offset: 0, 0
+  index: -1

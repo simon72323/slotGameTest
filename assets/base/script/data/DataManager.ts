@@ -2,6 +2,7 @@ import { BetData } from 'db://assets/base/script/data/BetData';
 import { UrlParam } from 'db://assets/base/script/data/UrlParam';
 import { IGameData, IPromotionBrief, ISpinData, IUserData } from 'db://assets/base/script/network/HttpApi';
 import { BigWinType, ModuleID, TurboMode } from 'db://assets/base/script/types/BaseType';
+import { GameData } from 'db://assets/gameSample/script/main/GameData';
 /** 遊戲內選單資料 */
 type InGameMenuStore = {
     imageURL: string,

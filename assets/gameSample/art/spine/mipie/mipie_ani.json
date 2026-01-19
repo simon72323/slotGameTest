@@ -1,0 +1,61 @@
+{
+"skeleton": {
+	"hash": "86t5Z6zKJ/RtNDP2L5T3uZ338uo",
+	"spine": "3.8.99",
+	"x": -400,
+	"y": -334,
+	"width": 800,
+	"height": 668,
+	"images": "./images/",
+	"audio": ""
+},
+"bones": [
+	{ "name": "root" },
+	{ "name": "size", "parent": "root" }
+],
+"slots": [
+	{ "name": "mipie_bkg", "bone": "size", "attachment": "mipie_bkg", "blend": "additive" },
+	{ "name": "par/PPP 2_00000", "bone": "size", "attachment": "par/PPP 2_00000", "blend": "additive" }
+],
+"skins": [
+	{
+		"name": "default",
+		"attachments": {
+			"mipie_bkg": {
+				"mipie_bkg": { "x": -1.12, "y": -38.77, "width": 713, "height": 545 }
+			},
+			"par/PPP 2_00000": {
+				"par/PPP 2_00000": { "y": -30.57, "width": 713, "height": 560 },
+				"par/PPP 2_00010": { "y": -30.57, "width": 713, "height": 560 },
+				"par/PPP 2_00020": { "y": -30.57, "width": 713, "height": 560 },
+				"par/PPP 2_00030": { "y": -30.57, "width": 713, "height": 560 },
+				"par/PPP 2_00040": { "y": -30.57, "width": 713, "height": 560 },
+				"par/PPP 2_00050": { "y": -30.57, "width": 713, "height": 560 }
+			}
+		}
+	}
+],
+"animations": {
+	"animation": {
+		"slots": {
+			"mipie_bkg": {
+				"color": [
+					{ "color": "ffc90076" },
+					{ "time": 0.2, "color": "ffa40044" },
+					{ "time": 0.4, "color": "ffc90076" }
+				]
+			},
+			"par/PPP 2_00000": {
+				"attachment": [
+					{ "time": 0.0667, "name": "par/PPP 2_00010" },
+					{ "time": 0.1333, "name": "par/PPP 2_00020" },
+					{ "time": 0.2, "name": "par/PPP 2_00030" },
+					{ "time": 0.2667, "name": "par/PPP 2_00040" },
+					{ "time": 0.3333, "name": "par/PPP 2_00050" },
+					{ "time": 0.4, "name": "par/PPP 2_00000" }
+				]
+			}
+		}
+	}
+}
+}

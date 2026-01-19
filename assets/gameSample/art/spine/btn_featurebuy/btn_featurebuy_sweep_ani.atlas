@@ -1,0 +1,90 @@
+
+btn_featurebuy_sweep_ani.png
+size: 364,364
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+btn_featurebuy_sweep_00001
+  rotate: true
+  xy: 11, 349
+  size: 10, 23
+  orig: 118, 24
+  offset: 0, 0
+  index: -1
+btn_featurebuy_sweep_00003
+  rotate: true
+  xy: 62, 337
+  size: 22, 24
+  orig: 118, 24
+  offset: 0, 0
+  index: -1
+btn_featurebuy_sweep_00005
+  rotate: false
+  xy: 88, 335
+  size: 32, 24
+  orig: 118, 24
+  offset: 3, 0
+  index: -1
+btn_featurebuy_sweep_00007
+  rotate: false
+  xy: 122, 335
+  size: 32, 24
+  orig: 118, 24
+  offset: 15, 0
+  index: -1
+btn_featurebuy_sweep_00009
+  rotate: false
+  xy: 156, 335
+  size: 33, 24
+  orig: 118, 24
+  offset: 27, 0
+  index: -1
+btn_featurebuy_sweep_00011
+  rotate: false
+  xy: 191, 335
+  size: 33, 24
+  orig: 118, 24
+  offset: 39, 0
+  index: -1
+btn_featurebuy_sweep_00013
+  rotate: false
+  xy: 226, 335
+  size: 33, 24
+  orig: 118, 24
+  offset: 52, 0
+  index: -1
+btn_featurebuy_sweep_00015
+  rotate: false
+  xy: 261, 335
+  size: 33, 24
+  orig: 118, 24
+  offset: 64, 0
+  index: -1
+btn_featurebuy_sweep_00017
+  rotate: false
+  xy: 296, 335
+  size: 32, 24
+  orig: 118, 24
+  offset: 77, 0
+  index: -1
+btn_featurebuy_sweep_00019
+  rotate: false
+  xy: 330, 335
+  size: 29, 24
+  orig: 118, 24
+  offset: 89, 0
+  index: -1
+btn_featurebuy_sweep_00021
+  rotate: true
+  xy: 36, 343
+  size: 16, 24
+  orig: 118, 24
+  offset: 102, 0
+  index: -1
+btn_featurebuy_sweep_00023
+  rotate: true
+  xy: 2, 356
+  size: 3, 7
+  orig: 118, 24
+  offset: 115, 15
+  index: -1
