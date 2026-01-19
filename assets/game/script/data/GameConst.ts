@@ -6,29 +6,29 @@ import { TurboMode } from 'db://assets/base/script/types/BaseType';
  */
 export class GameConst extends BaseConst {
     /**Scatter中獎數量 */
-    public static SCATTER_WIN_COUNT: number = 3;
+    public static readonly SCATTER_WIN_COUNT: number = 3;
 
     /** 中獎線路配置 (3x5盤面) */
-    public static payLineData: number[][] = [
+    public static readonly PAY_LINE_DATA: number[][] = [
         [1, 1, 1, 1, 1], [0, 0, 0, 0, 0], [2, 2, 2, 2, 2], [1, 0, 0, 0, 1], [1, 2, 2, 2, 1],
         [2, 1, 0, 1, 2], [0, 1, 2, 1, 0], [2, 2, 1, 0, 0], [0, 0, 1, 2, 2], [2, 1, 1, 1, 0]
     ];
 
     /**橫軸列數 */
-    public static REEL_COL: number = 5;
+    public static readonly REEL_COL: number = 5;
 
     /**縱軸列數 */
-    public static REEL_ROW: number = 3;
+    public static readonly REEL_ROW: number = 3;
 
     /**scatter中獎次數 */
-    public static SCATTER_MAPPING: { [key: number]: number } = {
+    public static readonly SCATTER_MAPPING: { [key: number]: number } = {
         3: 10,  // 索引1對應3個scatter，10次
         4: 15,  // 索引2對應4個scatter，15次
         5: 20   // 索引3對應5個scatter，20次
     };
 
     /**MG初始盤面結果 */
-    public static MG_INIT_RESULT: number[][] = [
+    public static readonly MG_INIT_RESULT: number[][] = [
         [15, 16, 17],
         [1, 6, 2],
         [8, 0, 7],

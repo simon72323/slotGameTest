@@ -6,13 +6,15 @@
  *    - 音效：audio/sound/
  *    - 音樂：audio/music/
  * 
- * 基本用法：先加載音效資源才能播放音效
- *    await audioManager().loadBundleAudios('audio');
+ * 基本用法：加載音效資源才能播放音效
+ *    await audioManager().loadBundleAudios();
  */
 
 import { _decorator, AudioSource, game, Game, tween, Component, assetManager, AudioClip, AssetManager, Tween, Node, director } from 'cc';
 
 import { Logger } from 'db://assets/base/script/utils/Logger';
+import { BundleLoader } from '../utils/BundleLoader';
+import { BaseConst } from '../data/BaseConst';
 
 interface AudioInfo {
     startTime: number;//紀錄播放當下時間(讓後台來回切換時正常接續播放音效)
@@ -94,53 +96,18 @@ export class AudioManager extends Component {
      * 加載 bundle 內的音效
      * @param bundleName bundle名稱(預設為audio)
      */
-    public async loadBundleAudios(bundleName: string = 'audio'): Promise<void> {
-        const existingBundle = assetManager.getBundle(bundleName);
-        if (existingBundle) {
-            await this.loadAudio(existingBundle);
-        } else {
-            const bundle = await this.getBundle(bundleName);
-            await this.loadAudio(bundle);
-        }
-        // this.updateAudioSetting();//更新音效狀態
-        // this.watchAudioSetting();//監聽【公版】音效狀態
-    }
-
-    /**
-     * 獲取 bundle
-     * @param bundleName bundle名稱
-     * @returns bundle
-     */
-    private getBundle(bundleName: string): Promise<AssetManager.Bundle> {
-        return new Promise(resolve => {
-            assetManager.loadBundle(bundleName, (err, bundle) => {
-                if (err) {
-                    Logger.error(`無法獲取${bundleName} bundle: ${err}`);
-                    return;
-                }
-                resolve(bundle);
-            });
-        });
-    }
-
-    /**
-     * 加載 bundle 內的音效
-     * @param bundle 遊戲 bundle
-     */
-    private async loadAudio(bundle: AssetManager.Bundle): Promise<void> {
-        return new Promise<void>(resolve => {
-            let loadedCount = 0;
-            const checkComplete = () => {
-                loadedCount++;
-                if (loadedCount === 2) resolve();
-            };
-            bundle?.loadDir('music', AudioClip, (err, audioClips: AudioClip[]) => {
-                if (err) {
-                    Logger.error('加載音樂失敗:', err);
-                    return;
-                }
+    public async loadBundleAudios(): Promise<void> {
+        const loader = new BundleLoader();
+        
+        // 添加音樂和音效加載任務
+        loader.add(BaseConst.bundle.audio, BaseConst.dir.music, AudioClip);
+        loader.add(BaseConst.bundle.audio, BaseConst.dir.sound, AudioClip);
+        
+        // 使用 Promise 等待加載完成回調
+        const musicPromise = new Promise<void>(resolve => {
+            BundleLoader.onLoaded(BaseConst.bundle.audio, BaseConst.dir.music, (audioClips: { [key: string]: AudioClip }) => {
                 // 將音樂存入 Map
-                audioClips.forEach(clip => {
+                Object.values(audioClips).forEach(clip => {
                     // 檢查是否已存在相同名稱的音樂
                     if (this.musicMap.has(clip.name)) return; // 跳過已存在的音樂
                     const audioSource = this.addComponent(AudioSource)!;
@@ -154,17 +121,15 @@ export class AudioManager extends Component {
                         musicPlaying: false
                     });
                 });
-                Logger.debug(`已加載 ${audioClips.length} 個音樂`);
-                checkComplete();
-
+                Logger.debug(`已加載 ${Object.keys(audioClips).length} 個音樂`);
+                resolve();
             });
-            bundle?.loadDir('sound', AudioClip, (err, audioClips: AudioClip[]) => {
-                if (err) {
-                    Logger.error('加載音效失敗:', err);
-                    return;
-                }
+        });
+        
+        const soundPromise = new Promise<void>(resolve => {
+            BundleLoader.onLoaded(BaseConst.bundle.audio, BaseConst.dir.sound, (audioClips: { [key: string]: AudioClip }) => {
                 // 將音效存入 Map
-                audioClips.forEach(clip => {
+                Object.values(audioClips).forEach(clip => {
                     if (this.soundMap.has(clip.name)) return; // 跳過已存在的音效
                     const audioSource = this.addComponent(AudioSource)!;
                     audioSource.playOnAwake = false; // 避免自動播放
@@ -176,10 +141,17 @@ export class AudioManager extends Component {
                         audioSource
                     });
                 });
-                Logger.debug(`已加載 ${audioClips.length} 個音效`);
-                checkComplete();
+                Logger.debug(`已加載 ${Object.keys(audioClips).length} 個音效`);
+                resolve();
             });
         });
+        
+        // 執行加載並等待回調完成
+        await loader.load();
+        await Promise.all([musicPromise, soundPromise]);
+        
+        // this.updateAudioSetting();//更新音效狀態
+        // this.watchAudioSetting();//監聽【公版】音效狀態
     }
 
     /**

@@ -2,7 +2,7 @@ import { _decorator, Button, Component, KeyCode, Label, Node, sp, Sprite, Tween,
 import { UrlParam } from 'db://assets/base/script/data/UrlParam';
 import { BaseEvent } from 'db://assets/base/script/event/BaseEvent';
 import { XEvent, XEvent4 } from 'db://assets/base/script/event/XEvent';
-import { BundleLoader } from 'db://assets/base/script/loading/BundleLoader';
+import { BundleLoader } from 'db://assets/base/script/utils/BundleLoader';
 import { audioManager } from 'db://assets/base/script/manager/AudioManager';
 import { Utils } from 'db://assets/base/script/utils/Utils';
 

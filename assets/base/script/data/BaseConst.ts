@@ -59,9 +59,29 @@ export class BaseConst {
         }
     };
 
-    public static readonly BUNDLE_BASE_LANGUAGE: string = 'baseLanguage';
-    public static readonly BUNDLE_LANGUAGE: string = 'language';
-    public static readonly DIR_LOADING: string = 'loading';
+    public static readonly bundle = {
+        base: 'base',
+        baseLanguage: 'baseLanguage',
+        language: 'language',
+        loading: 'loading',
+        game: 'game',
+        audio: 'audio',
+    };
+
+    public static readonly dir = {
+        loading: 'loading',
+        prefab: 'prefab',
+        ui: 'ui',
+        music: 'music',
+        sound: 'sound',
+    };
+
+    public static readonly prefab = {
+        loadingPage: 'loadingPage',
+        base: 'base',
+        baseTop: 'baseTop',
+        game: 'game'
+    };
 
     /** 網站 */
     public static Sites = {

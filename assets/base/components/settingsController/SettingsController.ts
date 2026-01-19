@@ -31,8 +31,8 @@ export class SettingsController extends Component {
     private turboBtn: Node = null;
     @property({ type: Node, tooltip: '選項按鈕' })
     private optionBtn: Node = null;
-    @property({ type: Node, tooltip: '全螢幕按鈕' })
-    private screenBtn: Node = null;
+    // @property({ type: Node, tooltip: '全螢幕按鈕' })
+    // private screenBtn: Node = null;
     @property({ type: Node, tooltip: '聲音按鈕' })
     private audioBtn: Node = null;
     @property({ type: Node, tooltip: '下注紀錄按鈕' })
@@ -43,14 +43,14 @@ export class SettingsController extends Component {
     private informationBtn: Node = null;
     @property({ type: Node, tooltip: '返回按鈕' })
     private backBtn: Node = null;
-    @property({ type: Node, tooltip: '增加下注按鈕' })
-    private addBetBtn: Node = null;
-    @property({ type: Node, tooltip: '減少下注按鈕' })
-    private minusBetBtn: Node = null;
-    @property({ type: Node, tooltip: '直式全螢幕節點' })
-    private porScreenPosNode: Node = null;
-    @property({ type: Node, tooltip: '橫式全螢幕節點' })
-    private landScreenPosNode: Node = null;
+    // @property({ type: Node, tooltip: '增加下注按鈕' })
+    // private addBetBtn: Node = null;
+    // @property({ type: Node, tooltip: '減少下注按鈕' })
+    // private minusBetBtn: Node = null;
+    // @property({ type: Node, tooltip: '直式全螢幕節點' })
+    // private porScreenPosNode: Node = null;
+    // @property({ type: Node, tooltip: '橫式全螢幕節點' })
+    // private landScreenPosNode: Node = null;
 
     private porControllerBtns: Node = null;//直式控制器
     private porOptionMenu: Node = null;//直式選單
@@ -102,7 +102,7 @@ export class SettingsController extends Component {
         addBtnClickEvent(this.node, scriptName, this.autoBtn.getComponent(Button), 'onClickAuto');
         addBtnClickEvent(this.node, scriptName, this.turboBtn.getComponent(Button), 'onClickTurbo');
         addBtnClickEvent(this.node, scriptName, this.optionBtn.getComponent(Button), 'onClickOption');
-        addBtnClickEvent(this.node, scriptName, this.screenBtn.getComponent(Button), 'onClickScreen');
+        // addBtnClickEvent(this.node, scriptName, this.screenBtn.getComponent(Button), 'onClickScreen');
         addBtnClickEvent(this.node, scriptName, this.audioBtn.getComponent(Button), 'onClickAudio');
         addBtnClickEvent(this.node, scriptName, this.recordBtn.getComponent(Button), 'onClickRecord');
         addBtnClickEvent(this.node, scriptName, this.favoritesBtn.getComponent(Button), 'onClickFavorites');
@@ -111,8 +111,8 @@ export class SettingsController extends Component {
 
         addBtnClickEvent(this.node, scriptName, this.backBtn.getComponent(Button), 'onClickOption');
         addBtnClickEvent(this.node, scriptName, this.stopAutoSpinBtn.getComponent(Button), 'onStopAutoSpin');
-        addBtnClickEvent(this.node, scriptName, this.addBetBtn.getComponent(Button), 'changeBet', '1');
-        addBtnClickEvent(this.node, scriptName, this.minusBetBtn.getComponent(Button), 'changeBet', '-1');
+        // addBtnClickEvent(this.node, scriptName, this.addBetBtn.getComponent(Button), 'changeBet', '1');
+        // addBtnClickEvent(this.node, scriptName, this.minusBetBtn.getComponent(Button), 'changeBet', '-1');
     }
 
     /**
@@ -161,8 +161,8 @@ export class SettingsController extends Component {
         }, this);
         // 只在iOS系統時隱藏全螢幕按鈕
         const isIOSDevice = this.isIOS();
-        this.porScreenPosNode.active = !isIOSDevice;
-        this.landScreenPosNode.active = !isIOSDevice;
+        // this.porScreenPosNode.active = !isIOSDevice;
+        // this.landScreenPosNode.active = !isIOSDevice;
     }
 
     /**
@@ -179,13 +179,13 @@ export class SettingsController extends Component {
         dataManager().lockKeyboard = !enabled;//鎖定/解除鍵盤功能
 
         //true時要判斷更新+-按鈕是否可用，false時直接禁用
-        if (enabled) {
-            this.addBetBtn.getComponent(Button).interactable = true;
-            this.minusBetBtn.getComponent(Button).interactable = true;
-        } else {
-            this.addBetBtn.getComponent(Button).interactable = false;
-            this.minusBetBtn.getComponent(Button).interactable = false;
-        }
+        // if (enabled) {
+        //     this.addBetBtn.getComponent(Button).interactable = true;
+        //     this.minusBetBtn.getComponent(Button).interactable = true;
+        // } else {
+        //     this.addBetBtn.getComponent(Button).interactable = false;
+        //     this.minusBetBtn.getComponent(Button).interactable = false;
+        // }
     }
 
     private sceneChange(moduleID: ModuleID) {
@@ -398,21 +398,21 @@ export class SettingsController extends Component {
     /**
      * 切換全螢幕
      */
-    private onClickScreen() {
-        audioManager().playSound(AudioKey.btnClick);
-        this.isFullScreen = !this.isFullScreen;
-        const fullScreenOn = this.screenBtn.getChildByName('FullScreenOn');
-        const fullScreenOff = this.screenBtn.getChildByName('FullScreenOff');
+    // private onClickScreen() {
+    //     audioManager().playSound(AudioKey.btnClick);
+    //     this.isFullScreen = !this.isFullScreen;
+    //     const fullScreenOn = this.screenBtn.getChildByName('FullScreenOn');
+    //     const fullScreenOff = this.screenBtn.getChildByName('FullScreenOff');
 
-        fullScreenOn.active = !this.isFullScreen;
-        fullScreenOff.active = this.isFullScreen;
+    //     fullScreenOn.active = !this.isFullScreen;
+    //     fullScreenOff.active = this.isFullScreen;
 
-        if (this.isFullScreen) {
-            screen.requestFullScreen();//請求全螢幕
-        } else {
-            screen.exitFullScreen();//退出全螢幕
-        }
-    }
+    //     if (this.isFullScreen) {
+    //         screen.requestFullScreen();//請求全螢幕
+    //     } else {
+    //         screen.exitFullScreen();//退出全螢幕
+    //     }
+    // }
 
     /**
      * 切換音效狀態
