@@ -69,6 +69,7 @@ export class BaseConst {
     };
 
     public static readonly dir = {
+        texture: 'texture',
         loading: 'loading',
         prefab: 'prefab',
         ui: 'ui',

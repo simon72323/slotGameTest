@@ -1,7 +1,6 @@
-import { _decorator, Component, Node } from 'cc';
+import { _decorator, Component, sp } from 'cc';
 import { BaseEvent } from 'db://assets/base/script/event/BaseEvent';
 import { ModuleID } from 'db://assets/base/script/types/BaseType';
-import { Utils } from 'db://assets/base/script/utils/Utils';
 
 const { ccclass } = _decorator;
 /**
@@ -10,11 +9,10 @@ const { ccclass } = _decorator;
 @ccclass('BackgroundUI')
 export class BackgroundUI extends Component {
     //免費遊戲背景
-    private bg_fg: Node;
+    private ani_bg: sp.Skeleton;
 
     onLoad() {
-        this.bg_fg = this.node.getChildByName('bg_fg');
-
+        this.ani_bg = this.node.getChildByName('ani_bg').getComponent(sp.Skeleton);
         BaseEvent.changeScene.on(this.onChangeScene, this);
         this.onChangeScene(ModuleID.MG);
     }
@@ -24,18 +22,7 @@ export class BackgroundUI extends Component {
      * @param id 
      */
     private onChangeScene(id: ModuleID) {
-        if (id === ModuleID.MG) {
-            if (this.bg_fg.active) {
-                Utils.fadeOut(this.bg_fg, 0.5, 255, 0, () => {
-                    this.bg_fg.active = false;
-                });
-            }
-        } else {
-            if (!this.bg_fg.active) {
-                this.bg_fg.active = true;
-                Utils.fadeIn(this.bg_fg, 0.5, 0, 255);
-            }
-        }
+        const animName = id === ModuleID.MG ? 'mg' : 'fg';
+        this.ani_bg.setAnimation(0, animName, true);
     }
 }
-
