@@ -123,3 +123,4 @@ const bottomSymbols = data.reelBottomSymbol[reelIndex];
 3. 状态数据（如 `reelStopping`、`reelStopped`）会在游戏运行时自动更新
 4. 使用 `resetState()` 方法可以重置所有状态数据
 
+

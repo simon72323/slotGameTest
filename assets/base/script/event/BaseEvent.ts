@@ -38,12 +38,16 @@ export class BaseEvent {
     public static stopAutoSpin: XEvent = new XEvent();
     //=========================== settingsController事件 =========================
 
+    /**初始化遊戲完成 */
+    public static initGameComplete: XEvent = new XEvent();
+
+
+
     /**初始化封包完成 */
     public static initMessageComplete: XEvent = new XEvent();
-    /**遊戲資源讀取完成 */
-    public static initResourceComplete: XEvent = new XEvent();
+
     /**通知LoadingUI關閉(必須和initMessageComplete錯開,否則可能會有順序問題) */
-    public static hideLoading: XEvent = new XEvent();
+    // public static hideLoading: XEvent = new XEvent();
     /**讀取畫面關閉,開始遊戲 */
     public static startGame: XEvent = new XEvent();
 

@@ -64,7 +64,8 @@ export class BaseConst {
         baseLanguage: 'baseLanguage',
         language: 'language',
         loading: 'loading',
-        game: 'game',
+        mainGame: 'mainGame',//主遊戲資源
+        lazyGame: 'lazyGame',//後載資源
         audio: 'audio',
     };
 

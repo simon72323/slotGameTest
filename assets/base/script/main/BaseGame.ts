@@ -74,8 +74,8 @@ export class BaseGame extends Component {
         // UIManager.getInstance().initialize();
 
         //載入遊戲語系圖
-        const languageLoader = new BundleLoader();
-        languageLoader.add(BaseConst.bundle.baseLanguage, `${UrlParam.lang}/${BaseConst.dir.ui}`, SpriteFrame);
+        // const languageLoader = new BundleLoader();
+        // languageLoader.add(BaseConst.bundle.baseLanguage, `${UrlParam.lang}/${BaseConst.dir.ui}`, SpriteFrame);
         // languageLoader.add(BaseConst.bundle.currency, '', SpriteFrame);
 
         this.childOnLoad();
@@ -86,10 +86,10 @@ export class BaseGame extends Component {
         // await SocketManager.getInstance().connect(BaseDataManager.getInstance().getSocketUrl());
 
         //載入遊戲語系圖
-        await languageLoader.load();
+        // await languageLoader.load();
 
         //遊戲資源讀取完成，通知LoadingPage可以關閉
-        BaseEvent.initResourceComplete.emit();
+        // BaseEvent.initResourceComplete.emit();
 
         //遊戲後載資源必須放在languageLader之後, 避免下載順序導致太晚進入遊戲
         this.childPostponeLoad();

@@ -1,8 +1,8 @@
 import { _decorator, Button, Component, Label, Node } from 'cc';
-import { XEvent1 } from 'db://assets/base/script/event/XEvent';
+import { XEvent1, XEvent2 } from 'db://assets/base/script/event/XEvent';
 import { addBtnClickEvent, Utils } from 'db://assets/base/script/utils/Utils';
-import { UrlParam } from 'db://assets/base/script/data/UrlParam';
 import { BaseConst } from 'db://assets/base/script/data/BaseConst';
+import { UrlParam } from '../../script/data/UrlParam';
 
 const { ccclass } = _decorator;
 
@@ -11,7 +11,7 @@ const { ccclass } = _decorator;
  */
 @ccclass('Notice')
 export class Notice extends Component {
-    public static showError: XEvent1<number> = new XEvent1();
+    public static showError: XEvent1<ErrorCode> = new XEvent1();
 
     /**錯誤提示 */
     private infoErrorConfirm: Node = null;
@@ -38,17 +38,26 @@ export class Notice extends Component {
      * 顯示錯誤提示
      * @param errorCode {number} 錯誤代碼
      */
-    public async showError(errorCode: number) {
-        await this.loadErrorMessage();
+    public async showError(code: ErrorCode) {
+        if (this.errorMessage === null) {
+            //載入錯誤訊息
+            this.errorMessage = await Utils.loadJson('data/ErrorMessage');
+        }
         Utils.fadeIn(this.node, 0.2, 0, 255);
         Utils.tweenScaleTo(this.node, 0.2, 0.5, 1);
 
         //獲取錯誤訊息
         const lang = UrlParam.lang || 'en';
-        const messageKey = this.errorMessage[String(errorCode)] || this.errorMessage['default'].Message;
+        const errorString = code.toString();
+        const messageKey = this.errorMessage[errorString] || this.errorMessage['default'].Message;
         const messageText = this.errorMessage.ErrorMessage[messageKey][lang];
-        this.infoErrorLabel.string = messageText.replace('{0}', String(errorCode));
+        this.infoErrorLabel.string = messageText.replace('{0}', errorString);
         this.node.active = true;
+
+        // SocketManager.getInstance().disconnect();//斷開Socket連接
+        // audioManager().setSoundMute(true);//音效關
+        // audioManager().setMusicMute(true);//音樂關
+        // TracingManager.getInstance().logError(`發生錯誤 error code:${code}`, { errorCode: code }, { category: code });
     }
 
     /**
@@ -60,12 +69,24 @@ export class Notice extends Component {
         });
         Utils.tweenScaleTo(this.node, 0.2, 1, 0.5);
     }
+}
 
-    /**
-     * 載入錯誤訊息
-     */
-    private async loadErrorMessage() {
-        if (this.errorMessage !== null) return;
-        this.errorMessage = await Utils.loadJson('data/ErrorMessage');
-    }
+export enum ErrorCode {
+    MSG_TOKEN_ERROR = 0,
+    MSG_DISCONNECT = 1,
+    MSG_HOMEPAGE = 2,
+    MSG_ACCOUNT_ERROR = 3,
+    MSG_SHORT_BALANCE = 4,
+    MSG_ACCOUNT_LOCKED = 5,
+    MSG_TRADE_LOCK = 6,
+    MSG_VERSION_ERROR = 7,
+    LOGIN_TIMEOUT = 8,
+}
+
+export enum ErrorType {
+    NOTICE = 0, //unlock
+    WARNING = 1, //unlock
+    ALARM = 2, //lock
+    INSUFFICIENT_BALANCE = 3,
+    INSUFFICIENT_BALANCE_DO_NOT_LOCK = 4,
 }

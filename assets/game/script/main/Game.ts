@@ -9,7 +9,7 @@ import { KeyboardManager } from 'db://assets/base/script/manager/KeyboardManager
 import { taskManager } from 'db://assets/base/script/tasks/TaskManager';
 import { ScreenAdapter } from 'db://assets/base/script/utils/ScreenAdapter';
 import { BetData } from 'db://assets/base/script/data/BetData';
-import { Loading } from 'db://assets/base/components/loading/Loading';
+import { Loading } from 'db://assets/base/script/main/Loading';
 
 import { FeatureBuyBtn } from 'db://assets/game/components/FeatureBuyUI/FeatureBuyBtn';
 import { FeatureBuyPage } from 'db://assets/game/components/FeatureBuyUI/FeatureBuyPage';
@@ -42,25 +42,7 @@ export class Game extends BaseGame {
         this.node.getChildByName('gameTop').children.forEach((child) => {
             this.gameTopList.push(child);
         });
-
         this.onListenEvent();//監聽事件
-        
-        //初始化盤面
-        SlotMachine.initResultParser.emit(GameConst.MG_INIT_RESULT);
-
-        // if (this.isFake === false) {
-        // this.netReady();//網路準備完成
-        // } else {
-        //     //獲取促銷簡介、遊戲內選單狀態、遊戲內選單
-        //     const fakeData1 = { 'name': '', 'account': 'token5800', 'agent_account': 'CS8901', 'credit': 500000000, 'currency': 'IDR', 'free_spin_data': [{ 'free_spin_id': '', 'bet': 0, 'end_date': '', 'rounds_left': 0 }], 'is_anchor': false, 'simulator_data': {} };
-        //     dataManager().setUserData(fakeData1);
-        //     const fakeData2 = { 'game_id': 5800, 'line_bet': [10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10], 'coin_value': [0.01, 0.02, 0.03, 0.04, 0.05, 0.06, 0.07, 0.08, 0.09, 0.1, 0.12, 0.13, 0.14, 0.15, 0.16, 0.17, 0.18, 0.19, 0.2, 0.22, 0.24, 0.26, 0.28, 0.3, 0.32, 0.34], 'bet_available_idx': 0, 'line_total': 30, 'line_available': [30], 'line_bet_default_index': 0, 'coin_value_default_index': 0, 'win': 1, 'big_win': 20, 'super_win': 50, 'mega_win': 100, 'spin_mode': 1, 'buy_spin': { 'allow_buy': 1, 'multiplier': 50, 'limit_total': 6000000 } };
-        //     dataManager().setGameData(fakeData2);
-        //     this.scheduleOnce(() => {
-        //         this.initGame();
-        //     }, 0);
-        // }
-        // this.childPostponeLoad();//後載資源
     }
 
     /**監聽事件 */
@@ -104,8 +86,9 @@ export class Game extends BaseGame {
 
         SettingsController.init.emit();//初始化設定控制器
         MessageHandler.init.emit();//初始化消息處理
-        Loading.hide.emit();//隱藏載入畫面
 
+
+        BaseEvent.initGameComplete.emit();//初始化遊戲完成(通知Loading頁關閉)
         //開始遊戲--------------------------------------------------------
         // console.log('開始遊戲');
         taskManager().addTask(new IdleTask());

@@ -23,7 +23,7 @@
     "_active": true,
     "_components": [],
     "_prefab": {
-      "__id__": 16
+      "__id__": 18
     },
     "_lpos": {
       "__type__": "cc.Vec3",
@@ -54,7 +54,7 @@
     },
     "autoReleaseAssets": false,
     "_globals": {
-      "__id__": 17
+      "__id__": 19
     },
     "_id": "f83a3db4-acd8-4197-b389-2f8a0e6d0976"
   },
@@ -77,13 +77,13 @@
     "_active": true,
     "_components": [
       {
-        "__id__": 13
-      },
-      {
-        "__id__": 14
-      },
-      {
         "__id__": 15
+      },
+      {
+        "__id__": 16
+      },
+      {
+        "__id__": 17
       }
     ],
     "_prefab": null,
@@ -252,6 +252,9 @@
       },
       {
         "__id__": 12
+      },
+      {
+        "__id__": 13
       }
     ],
     "removedComponents": []
@@ -317,6 +320,22 @@
       "y": 0,
       "z": 0
     }
+  },
+  {
+    "__type__": "CCPropertyOverrideInfo",
+    "targetInfo": {
+      "__id__": 14
+    },
+    "propertyPath": [
+      "_name"
+    ],
+    "value": "StartBtn"
+  },
+  {
+    "__type__": "cc.TargetInfo",
+    "localID": [
+      "3c14Lz0iVLK7BLSjffIAVq"
+    ]
   },
   {
     "__type__": "cc.UITransform",
@@ -402,28 +421,28 @@
   {
     "__type__": "cc.SceneGlobals",
     "ambient": {
-      "__id__": 18
-    },
-    "shadows": {
-      "__id__": 19
-    },
-    "_skybox": {
       "__id__": 20
     },
-    "fog": {
+    "shadows": {
       "__id__": 21
     },
-    "octree": {
+    "_skybox": {
       "__id__": 22
     },
-    "skin": {
+    "fog": {
       "__id__": 23
     },
-    "lightProbeInfo": {
+    "octree": {
       "__id__": 24
     },
-    "postSettings": {
+    "skin": {
       "__id__": 25
+    },
+    "lightProbeInfo": {
+      "__id__": 26
+    },
+    "postSettings": {
+      "__id__": 27
     },
     "bakedWithStationaryMainLight": false,
     "bakedWithHighpLightmap": false
