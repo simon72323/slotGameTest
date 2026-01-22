@@ -38,7 +38,7 @@ export class Game extends BaseGame {
    * 子類別資料載入實作
    */
     childOnLoad() {
-        /**設定全畫面節點 */
+        /**設定遊戲上層節點 */
         this.node.getChildByName('gameTop').children.forEach((child) => {
             this.gameTopList.push(child);
         });
@@ -88,10 +88,12 @@ export class Game extends BaseGame {
         MessageHandler.init.emit();//初始化消息處理
 
 
-        BaseEvent.initGameComplete.emit();//初始化遊戲完成(通知Loading頁關閉)
+        BaseEvent.initGameComplete.emit();//初始化遊戲完成(顯示開始按鈕)
         //開始遊戲--------------------------------------------------------
-        // console.log('開始遊戲');
-        taskManager().addTask(new IdleTask());
+        BaseEvent.startGame.on(() => {
+            // console.log('開始遊戲');
+            taskManager().addTask(new IdleTask());
+        }, this);
     }
 
     /**

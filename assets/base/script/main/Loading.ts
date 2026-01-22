@@ -36,13 +36,14 @@ export class Loading extends Component {
 
 
     /**
-     * 初始化遊戲完成
+     * 初始化遊戲完成(顯示開始按鈕)
      */
     private onInitGameComplete(): void {
         this.startBtn.active = true;
         this.startBtn.on(Button.EventType.CLICK, () => {
             //關閉載入畫面
             Utils.fadeOut(this.node, 0.1, 255, 0, () => {
+                BaseEvent.startGame.emit();
                 this.node.active = false;
             });
         }, this,);

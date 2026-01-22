@@ -124,3 +124,4 @@ const bottomSymbols = data.reelBottomSymbol[reelIndex];
 4. 使用 `resetState()` 方法可以重置所有状态数据
 
 
+
